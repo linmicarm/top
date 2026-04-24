@@ -15,7 +15,6 @@ Each section of the curriculum builds directly on the last, so this repo grows i
 - **Foundations**: early exercises covering HTML, CSS, and JavaScript basics
 - **Projects**: milestone builds assigned throughout the curriculum
 - **Assignments**: smaller exercises focused on specific concepts or techniques
-- 
 ## Optimizations
  
 Because TOP emphasizes understanding over speed, I focus on:
