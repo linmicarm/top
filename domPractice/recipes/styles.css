@@ -1,0 +1,144 @@
+/*Standardized the font, text alignment, padding, and background color for the entire page*/
+body {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f0f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+}
+/*Styled the logo image to be circular and fit within its container*/
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*Styled the heading with a specific font, size, weight, and margins*/
+.heading {
+  font-family: 'Amatic SC', cursive;
+  font-size: 62px;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+/*Styled the subtitle with a specific color, size, letter spacing, and margin*/
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+}
+/*Styled the content section to use flexbox for layout, with centered items, gaps between them, and no wrapping*/
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: nowrap;
+}
+/*Styled each item to be a flex container with column direction, centered items, gaps between them, a fixed width, and a transition for the transform property*/
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 320px;
+  transition: transform 0.25s ease;
+}
+/*Added a hover effect to each item that moves it up slightly*/
+.item:hover {
+  transform: translateY(-6px);
+}
+/*Styled the images within each item to have specific dimensions, rounded corners, object fit, a border, and transitions for box shadow and border color*/
+.item img {
+  width: 320px;
+  height: 460px;
+  border-radius: 160px 160px 24px 24px;
+  object-fit: cover;
+  border: 2px solid #e5e5e5;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+/*Added a hover effect to the images that creates a glowing shadow and changes the border color*/
+.item:hover img {
+  box-shadow: 0 0 28px 8px rgba(236, 130, 180, 0.55);
+  border-color: #e98bc4;
+}
+/*Styled the subheading within each item to use a specific font, size, weight, and margin*/
+.item p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+/*Styled the description within each item to have a specific font size, color, line height, maximum width, and italic style*/
+.description {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.5;
+  max-width: 260px;
+  font-style: italic;
+}
+/*Removed the default underline from all links on the page*/
+a { 
+    text-decoration: none; 
+    color: rgb(41, 41, 41);
+}
+/*Added a hover effect to all links that changes their color to a semi-transparent pink*/
+a:hover {
+    color: rgba(236, 130, 180, 0.55);
+}
+/*Styled visited links to have a specific color that is a semi-transparent pink*/
+a:visited {
+    color: rgba(236, 130, 180, 0.55);
+}
+/*Styled the left section of the content to be a flex container with column direction, gaps between items, padding on the left, and specific dimensions*/
+.left{  
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding-left: 30px;
+    width:420px;
+    height: 1507px;
+}
+/*Styled the right section of the content to be a flex container with column direction, gaps between items, padding on the right, and specific dimensions*/
+.left img{
+    border-radius: 10px;
+}
+/*Styled the right top section to have rounded corners, a border, and specific height*/
+.right-top{
+    border-radius: 10px;
+    border:1px solid rgb(41, 41, 41);
+    height:250px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 420px;
+}
+/*Removed the default list style and padding from all unordered lists on the page*/
+ul{
+    list-style-type: none;
+    padding:0;  
+}
+/*Styled the steps container to have rounded corners, a border, and specific height*/
+.steps-container{   
+    margin-top:20px;
+    border-radius: 10px;
+    border:1px solid rgb(71, 71, 71);
+}
+/*Styled the ingredients container to have rounded corners, a background color, padding, and to grow to fill available space*/
+.ingredients-container{
+    border-radius: 10px;
+    background-color: rgb(240, 236, 230);
+    padding:20px;
+}
+/*Added padding to the right top section and steps container for better spacing of their content*/
+.right-top,
+.steps-container{
+    padding:0 20px 0px 20px;
+}

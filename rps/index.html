@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sailor Moon Duels ✦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap" id="wrap">
+      <header class="game-header">
+        <div class="title">✦ sailor moon duels ✦</div>
+        <div class="subtitle">
+          ★ in the name of the moon, i challenge you! ★
+        </div>
+        <div class="divider">♡ ★ ♡ ★ ♡</div>
+      </header>
+
+      <section class="arena" aria-label="Battle arena">
+        <div class="combatant" id="player-combatant">
+          <div class="combatant-label">sailor moon</div>
+          <div class="weapon-display" id="player-icon" aria-live="polite">
+            ✦
+          </div>
+          <div class="weapon-name" id="player-name" aria-live="polite"></div>
+          <div
+            class="lives-row"
+            id="player-lives"
+            aria-label="Your lives"
+          ></div>
+        </div>
+
+        <div class="vs">vs</div>
+
+        <div class="combatant" id="enemy-combatant">
+          <div class="combatant-label">dark kingdom</div>
+          <div class="weapon-display" id="enemy-icon" aria-live="polite">✦</div>
+          <div class="weapon-name" id="enemy-name" aria-live="polite"></div>
+          <div
+            class="lives-row"
+            id="enemy-lives"
+            aria-label="Enemy lives"
+          ></div>
+        </div>
+      </section>
+
+      <div class="log-box" role="status" aria-live="polite">
+        <p class="log-text" id="log">choose your weapon, sailor moon...</p>
+      </div>
+
+      <section class="choices" id="choice-btns" aria-label="Choose your weapon">
+        <button
+          class="choice-btn"
+          onclick="play('crystal-star')"
+          aria-label="Crystal Star"
+        >
+          <span class="choice-icon">⭐</span>
+          <span class="choice-name">crystal star</span>
+        </button>
+        <button
+          class="choice-btn"
+          onclick="play('moon-stick')"
+          aria-label="Moon Stick"
+        >
+          <span class="choice-icon">🌙</span>
+          <span class="choice-name">moon stick</span>
+        </button>
+        <button
+          class="choice-btn"
+          onclick="play('silver-crystal')"
+          aria-label="Silver Crystal"
+        >
+          <span class="choice-icon">💠</span>
+          <span class="choice-name">silver crystal</span>
+        </button>
+      </section>
+
+      <button
+        class="reset-btn"
+        id="reset-btn"
+        onclick="resetGame()"
+        aria-label="Play again"
+      >
+        ✦ fight again ✦
+      </button>
+
+      <div class="divider" style="margin-top: 16px">♡ ★ ♡ ★ ♡</div>
+
+      <div class="rules-box" aria-label="Game rules">
+        <p class="rules">
+          crystal star beats moon stick<br />
+          moon stick beats silver crystal<br />
+          silver crystal beats crystal star
+        </p>
+      </div>
+
+      <footer class="game-footer">crafted with ♡ &amp; moon prism power</footer>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

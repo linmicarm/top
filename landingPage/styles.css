@@ -1,0 +1,203 @@
+/* Reset some default styles and set box-sizing to border-box for easier layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set a dark background color for the body and use Roboto font and sans-serif as fallback */
+body {
+  background-color: #1f1f1f;
+  font-family: Roboto, sans-serif;
+}
+/* Create a container class to center the content and set a max width */
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  min-height: 1912px;
+}
+/* Create a header with a specific height and padding, and set the background color */
+.header {
+  height: 534px;
+  padding: 28px 208px;
+}
+/* Create a header and footer with a specific height and set the background color */
+.header,
+.footer {
+  background-color: #1f2937;
+}
+/* Create a links class to style the header links and logo */
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 130px;
+}
+/* Style the logo and header links */
+.logo {
+  font-size: 24px;
+  color: #f9faf8;
+}
+/* Create a nav-links class to style the header links as a horizontal list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+}
+/* Style the header links with a specific color, font size, and remove text decoration */
+.nav-link:link,
+.nav-link:visited {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 18px;
+}
+/* Add a hover effect to the header links */
+.hero {
+  display: flex;
+  gap: 52px;
+}
+/* Create a left hero section with a header, some text, and a button */
+.hero-title {
+  font-size: 48px;
+  color: #f9faf8;
+  margin-bottom: 12px;
+  font-weight: 900;
+}
+/* Style the hero text with a specific font size, color, and margin */
+.hero-text {
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+}
+/* Style the hero button with a specific width, height, border radius, background color, font size, and color */
+.hero-button {
+  width: 130px;
+  height: 38px;
+  border-radius: 8px;
+  border: 0;
+  background-color: #3882f6;
+  font-size: 18px;
+  color: #e5e7eb;
+}
+/* Add a hover effect to the hero button and call to action button */
+.hero-button:hover,
+.call-to-action__button:hover {
+  cursor: pointer;
+}
+/* Style the hero image with a specific width, height, and background color */
+.hero-image {
+  width: 524px;
+  height: 238px;
+  background-color: #6d747d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#e5e7eb
+}
+/* Create a main content section with a specific background color */
+.main {
+  background-color: #fff;
+}
+/* Style the main header with a specific font size, color, and text alignment */
+.main-header {
+  text-align: center;
+  padding: 62px 0;
+  font-size: 36px;
+  color: #1f2937;
+  font-weight: 900;
+}
+/* Create a cards class to style the grid of cards with flexbox and set a gap between them */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 126px;
+}
+/* Style the cards with a specific width, height, border radius, border color, and margin */
+.card {
+  width: 168px;
+}
+/* Style the card box */
+.card-box {
+  width: 168px;
+  height: 168px;
+  border-radius: 16px;
+  border: 4px #3882f6 solid;
+  margin-bottom: 14px;
+}
+/* Style the card text with a specific font size, color, and text alignment */
+.card-text {
+  text-align: center;
+  font-size: 18px;
+  color: #616a77;
+}
+/* Create a quote section with a specific background color, height, and use flexbox to center the content */
+.quote {
+  background-color: #e5e7eb;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1f2937;
+}
+/* Style the quote text with a specific font size, weight, and style */
+.quote-text {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+}
+/* Style the quote box with a specific width */
+.quote-box {
+  width: 812px;
+}
+/* Style the quote author with a specific font size, weight, and text alignment */
+.quote-author {
+  text-align: right;
+  font-size: 24px;
+  font-weight: 900;
+}
+/* Create a call to action section with a specific height and use flexbox to center the content */
+.call-to-action {
+  height: 352px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Style the call to action box with a specific width, height, background color, border radius, and use flexbox to space the content */
+.cta-box {
+  height: 152px;
+  width: 1026px;
+  background-color: #3882f6;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 122px;
+  color: #e5e7eb;
+}
+/* Style the call to action text with a specific font size and color */
+.call-to-action-button {
+  background-color: transparent;
+  height: 36px;
+  width: 130px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  color: #e5e7eb;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+/* Style the call to action header with a specific font size and weight */
+.cta-header {
+  font-size: 18px;
+  font-weight: 700;
+}
+/* Style the call to action subtext with a specific font size and weight */
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+}
