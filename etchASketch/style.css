@@ -1,55 +1,95 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
+/* ===== THE TOY SHELL (pink frame) ===== */
+/* padding creates the pink border around the screen (thinner at bottom: 15px).
+   Large border-radius gives the rounded toy corners.
+   box-shadow lifts the whole toy off the page for a 3D float effect. */
 #frame {
   background-color: #ffb3c6;
-  padding: 40px 40px 100px 40px;
+  padding: 40px 70px 15px 70px;   /* top | right | bottom | left */
   border-radius: 100px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== THE SCREEN (where the grid lives) ===== */
+/* Fixed 900x680 drawing area. flex + flex-wrap lets the JS-generated
+   squares flow into rows automatically. overflow: hidden clips square
+   corners to the rounded edge. inset shadow makes the screen look recessed. */
 #container {
-  height: 960px;
-  width: 960px;
+  width: 900px;
+  height: 680px;
   display: flex;
   flex-wrap: wrap;
-  background-color: #e2ece7;   /* mint-gray */
+  background-color: #c4d4cb;       /* mint-gray "undrawn" screen color */
+  border-radius: 45px;
+  overflow: hidden;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.square {
-  /* size is set by JS; add a hover class style if you kept it */
-}
-
+/* ===== KNOBS ===== */
+/* Perfect circles via border-radius: 50%. transition animates the spin
+   on click (JS sets the rotation). border-top is the stripe so you can
+   see it rotate. Stacked box-shadows give a domed 3D look. */
 .knob {
   width: 110px;
   height: 110px;
   border-radius: 50%;
   background-color: #f5f0ec;
   transition: transform 0.3s ease;
-  border-top: 8px solid #c9bfb8;
+  border-top: 8px solid #c9bfb8;   /* visible reference stripe */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Row holding both knobs + the logo. space-between spreads the three items
+   apart (left knob | logo | right knob). padding pulls knobs in from edges. */
 #knobs {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 80px;
-  box-sizing: border-box;
-  margin-top: 40px;
+  padding: 0 30px;
+  box-sizing: border-box;          /* keeps padding inside the 100% width */
+  margin-top: 20px;
 }
 
+/* Stacks each knob above its label, centered */
 .knob-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* The "Clear" / "Resize" text under each knob */
 .label {
   margin-top: 12px;
   font-family: sans-serif;
   color: #8a6d7d;
   font-weight: bold;
+}
+
+/* ===== PAGE BACKGROUND & CENTERING ===== */
+/* Flexbox centers the whole toy on screen. min-height: 100vh gives full
+   screen height so vertical centering works. margin: 0 removes default
+   body margin (prevents a white edge / scrolling). Gradient = pastel backdrop. */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ffe5ec 0%, #e5d4ff 50%, #d4f0ff 100%);
+}
+
+/* ===== GOLD LOGO ===== */
+/* Metallic gold effect: a gold gradient is painted through the text via
+   background-clip: text + transparent color. text-stroke outlines each
+   letter so the gold pops against the pink; shadows/filter add sheen + depth. */
+#logo {
+  align-self: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 46px;
+  background: linear-gradient(180deg, #fbe9a0 0%, #e0b020 45%, #a87908 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px #8a6508;
+  text-shadow: 2px 2px 3px rgba(120, 80, 0, 0.35);
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.5));
 }
