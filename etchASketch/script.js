@@ -1,10 +1,12 @@
 const container = document.querySelector("#container");
+let currentSize = 16;
 
 function randomColor() {
   return Math.floor(Math.random() * 256);
 }
 
 function createGrid(size) {
+  currentSize = size;
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
@@ -29,9 +31,24 @@ function createGrid(size) {
 
 createGrid(16);
 
-const resize = document.querySelector("#resize");
+const leftKnob = document.querySelector("#leftKnob");
+leftKnob.rotation = 0;
 
-resize.addEventListener("click", () => {
+leftKnob.addEventListener("click", () => {
+  leftKnob.rotation += 180;
+  leftKnob.style.transform = `rotate(${leftKnob.rotation}deg)`;
+
+  container.innerHTML = "";
+  createGrid(currentSize);
+});
+
+const rightKnob = document.querySelector("#rightKnob");
+rightKnob.rotation = 0;
+
+rightKnob.addEventListener("click", () => {
+  rightKnob.rotation += 180;
+  rightKnob.style.transform = `rotate(${rightKnob.rotation}deg)`;
+
   const newSize = parseInt(prompt("How many squares per side?"));
   if (newSize >= 1 && newSize <= 100) {
     container.innerHTML = "";

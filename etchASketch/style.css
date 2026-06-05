@@ -1,10 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#frame {
+  background-color: #ffb3c6;
+  padding: 40px 40px 100px 40px;
+  border-radius: 100px;
+}
+
 #container {
   height: 960px;
   width: 960px;
   display: flex;
   flex-wrap: wrap;
+  background-color: #e2ece7;   /* mint-gray */
 }
 
-.hovered {
-  background-color: black;
+.square {
+  /* size is set by JS; add a hover class style if you kept it */
+}
+
+.knob {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #f5f0ec;
+  transition: transform 0.3s ease;
+  border-top: 8px solid #c9bfb8;
+}
+
+#knobs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.knob-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  margin-top: 12px;
+  font-family: sans-serif;
+  color: #8a6d7d;
+  font-weight: bold;
 }

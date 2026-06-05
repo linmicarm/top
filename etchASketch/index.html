@@ -8,8 +8,19 @@
   </head>
 
   <body>
-  <button id="resize">New Grid</button>
-  <div id="container"></div>
-  <script src="script.js"></script>
-</body>
+    <div id="frame">
+      <div id="container"></div>
+      <div id="knobs">
+        <div class="knob-group">
+          <div class="knob" id="leftKnob"></div>
+          <p class="label">Clear</p>
+        </div>
+        <div class="knob-group">
+          <div class="knob" id="rightKnob"></div>
+          <p class="label">Resize</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
