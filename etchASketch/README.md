@@ -10,8 +10,7 @@ Built as part of [The Odin Project](https://www.theodinproject.com/) Foundations
 
 ## 📸 Screenshot
 
-<!-- Add your screenshot here, e.g.: -->
-![Etch A Sketch screenshot](screenshot.png)
+<img width="1089" height="918" alt="image" src="https://github.com/user-attachments/assets/3cd442fd-2737-4abd-89f4-1f73cbdec9c6" />
 
 ## 🕹️ Features
 
