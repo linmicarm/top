@@ -4,7 +4,8 @@ A fully functional calculator built with vanilla JavaScript, HTML, and CSS — n
 
 [**Live demo →**](https://linmicarm.github.io/top/)
 
-![Calculator screenshot](screenshot.png)
+<img width="813" height="648" alt="image" src="https://github.com/user-attachments/assets/aad4a9c6-149f-4db1-89f2-da372a177e71" />
+
 
 ## Features
 
