@@ -4,10 +4,6 @@ A pastel-themed, browser-based [Etch A Sketch](https://en.wikipedia.org/wiki/Etc
 
 Built as part of [The Odin Project](https://www.theodinproject.com/) Foundations course.
 
-## ✨ Live Demo
-
-👉 **[Try it here](https://linmicarm.github.io/top/etchASketch/)**
-
 ## 📸 Screenshot
 
 <img width="1089" height="918" alt="image" src="https://github.com/user-attachments/assets/3cd442fd-2737-4abd-89f4-1f73cbdec9c6" />
