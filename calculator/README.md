@@ -2,8 +2,6 @@
 
 A fully functional calculator built with vanilla JavaScript, HTML, and CSS — no libraries, no frameworks. Built as the capstone project for the JavaScript fundamentals section of [The Odin Project](https://www.theodinproject.com/).
 
-[**Live demo →**](https://linmicarm.github.io/top/)
-
 <img width="813" height="648" alt="image" src="https://github.com/user-attachments/assets/aad4a9c6-149f-4db1-89f2-da372a177e71" />
 
 
