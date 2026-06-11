@@ -1,0 +1,86 @@
+/* Import Quicksand — a rounded, friendly font that drives the
+   "cute" aesthetic. Must be the first line in the file. */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+
+/* Border-box so padding doesn't inflate button widths and break
+   the grid math. */
+* {
+  box-sizing: border-box;
+}
+
+/* Center the calculator in the viewport; soft pink page background. */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #fbe9f0;
+}
+
+/* The calculator is a 4-column grid. gap handles spacing between
+   buttons; the soft pink box-shadow lifts it off the page. */
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 28px;
+  width: 340px;
+  box-shadow: 0 12px 30px rgba(180, 130, 160, 0.25);
+}
+
+/* Display spans all 4 columns (1 / -1 = first line to last).
+   The inset shadow makes it look slightly recessed, like a screen. */
+.display {
+  grid-column: 1 / -1;
+  background: #fff6fa;
+  text-align: right;
+  padding: 20px;
+  font-size: 2.2rem;
+  border-radius: 16px;
+  min-height: 70px;
+  overflow: hidden;     /* clip overflow instead of breaking layout */
+  word-wrap: break-word;
+  color: #7a5566;
+  box-shadow: inset 0 2px 6px rgba(180, 130, 160, 0.15);
+}
+
+/* Shared button styling. The transition powers the press animation. */
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+/* Slight darken on hover for feedback. */
+.btn:hover {
+  filter: brightness(0.96);
+}
+
+/* Shrink briefly when pressed — makes buttons feel tactile. */
+.btn:active {
+  transform: scale(0.94);
+}
+
+/* Rainbow rows: pink → peach → yellow → green → blue, top to
+   bottom. Each sets a background AND a darker matching text color
+   so digits stay readable on the pastel. */
+.row-1 { background: #ffd6e0; color: #8a3b54; }
+.row-2 { background: #ffe9c7; color: #8a5a1b; }
+.row-3 { background: #fff7c2; color: #7a6a14; }
+.row-4 { background: #d6f0c7; color: #3b6d2a; }
+.row-5 { background: #c7e6f5; color: #185fa5; }
+
+/* Equals spans 3 of the 4 bottom columns, leaving the 4th for
+   the backspace button. */
+.equals {
+  grid-column: span 3;
+}

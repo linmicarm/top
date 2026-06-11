@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Calculator grid. Buttons are a flat list; CSS Grid arranges
+       them into rows. Each button carries:
+         - a row-N class (for the rainbow color)
+         - a data-* attribute that the JS uses to identify it
+       Keeping behaviour on data-attributes (not text/position)
+       means the displayed symbol can differ from the value the
+       JS uses — e.g. the ÷ button sends "/" to the logic. -->
+  <div class="calculator">
+
+    <!-- Display. data-display is the JS hook; starts at 0. -->
+    <div class="display" data-display>0</div>
+
+    <!-- Row 1: 7 8 9 ÷ -->
+    <button class="btn row-1 digit" data-digit="7">7</button>
+    <button class="btn row-1 digit" data-digit="8">8</button>
+    <button class="btn row-1 digit" data-digit="9">9</button>
+    <button class="btn row-1 operator" data-operator="/">÷</button>
+
+    <!-- Row 2: 4 5 6 × -->
+    <button class="btn row-2 digit" data-digit="4">4</button>
+    <button class="btn row-2 digit" data-digit="5">5</button>
+    <button class="btn row-2 digit" data-digit="6">6</button>
+    <button class="btn row-2 operator" data-operator="*">×</button>
+
+    <!-- Row 3: 1 2 3 − -->
+    <button class="btn row-3 digit" data-digit="1">1</button>
+    <button class="btn row-3 digit" data-digit="2">2</button>
+    <button class="btn row-3 digit" data-digit="3">3</button>
+    <button class="btn row-3 operator" data-operator="-">−</button>
+
+    <!-- Row 4: 0 . AC + -->
+    <button class="btn row-4 digit" data-digit="0">0</button>
+    <button class="btn row-4 decimal" data-decimal>.</button>
+    <button class="btn row-4 clear" data-clear>AC</button>
+    <button class="btn row-4 operator" data-operator="+">+</button>
+
+    <!-- Row 5: wide = , then backspace -->
+    <button class="btn row-5 equals" data-equals>=</button>
+    <button class="btn row-5 backspace" data-backspace>⌫</button>
+  </div>
+
+  <!-- Script at the end of body so the
