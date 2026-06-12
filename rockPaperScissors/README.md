@@ -1,9 +1,12 @@
-<img width="1120" height="929" alt="Screenshot 2026-05-29 125318" src="https://github.com/user-attachments/assets/a386097a-4f88-4d29-bf0f-39a37269a22b" />
-# ✦ Sailor Moon Duels ✦
+## ✦ Sailor Moon Duels ✦
 
 > *In the name of the moon, I challenge you!*
 
 A Sailor Moon themed Rock Paper Scissors game built with vanilla HTML, CSS, and JavaScript.
+
+---
+
+<img width="1120" height="929" alt="Screenshot 2026-05-29 125318" src="https://github.com/user-attachments/assets/a386097a-4f88-4d29-bf0f-39a37269a22b" />
 
 ---
 
