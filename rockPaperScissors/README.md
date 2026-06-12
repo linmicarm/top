@@ -117,11 +117,6 @@ sailor-moon-duels/
 - **Modular functions** — each game action (`play`, `endGame`, `resetGame`, `renderLives`) is its own clean function
 - **Responsive design** — media queries to scale the layout gracefully on smaller screens
 
-
-## 📸 Preview
-
-<img width="1120" height="929" alt="Screenshot 2026-05-29 125318" src="https://github.com/user-attachments/assets/afb8a8d0-5428-4464-9dcc-5d43e833ba70" />
-
 ---
 
 *Crafted with ♡ & moon prism power*
